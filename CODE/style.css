@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f2f2f2;
+    font-family: 'Geist', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 1440px;
+    height: 396px;
+    max-width: 400px;
+}
+.content{
+    width: 416px;
+    height: 396px;
+    background-color: #ffffff;
+    padding: 24px;
+    gap: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    
+}
+ /* the login heading */
+.heading{
+    width: 326px;
+    height: 80px;
+    gap: 4px;
+}
+.head{
+    margin-bottom: 10px;
+}
+h1{
+    font-family: 'Geist', sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+    color:  #4D4845;
+    line-height: 48px;
+}
+.h1{
+    width: 326px;
+    /* height: 48px; */
+}
+
+h5{
+    color: grey;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+.login{
+    width: 368px;
+    height: 244px;
+    gap: 24px;
+}
+.form{
+    width: 368px;
+    height: 172px;
+    gap: 20px;
+}
+.class{
+    width: 368px;
+    height: 76px;
+    gap: 8px;
+}
+.clap{
+    width: 368px;
+    height: 76px;
+    gap: 10px;
+}
+.username {
+    width: 368px;
+    height: 48px;
+    border-radius: 10px;
+    padding: 16px;
+    border: 1px solid #E7E7E4;
+    display: flex;
+}
+.password{
+    width: 368px;
+    height: 48px;
+    border-radius: 10px;
+    border: 1px solid #E7E7E4;
+    padding: 16px;
+    display: flex;
+}
+input{
+    outline: none;
+    border: 1px solid;
+}
+input:focus{
+    border: solid #1E90FF;
+}
+
+.p{
+    padding-bottom: 10px;
+    color: #4D4845;
+    font-weight: 500;
+    font-size: 13px;
+    margin-top: 20px;
+}
+.button{
+    width: 368px;
+    height: 48px;
+    justify-content: space-between;
+    background-color: #1E90FF;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    margin-top: 13px;
+}
+.button:hover{
+    background-color: #407dbf;
+}
+.log{
+    text-decoration: none;
+    color: #ffffff;   
+}

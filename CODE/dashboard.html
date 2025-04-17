@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <label for="" class="heading"><p>Bat Files Dashboard</p></label>
+        <div class="account">
+            <div class="image">
+                <input type="image" class="img1" src="" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <form action="" class="dashboard" id="main">
+            <div class="head">
+                <label for="" class="label"><p>File Table</p></label>
+                <button type="button" id="addtask">Add Task +</button>
+            </div>    
+            <table>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th >Task_name</th>
+                        <th >File_path</th>
+                        <th >Last_run</th>
+                        <th >Last_output</th>
+                        <th >Is_enabled</th>
+                        <th >Interval_Minutes</th>
+                        <th >Next_run</th>
+                        <th >Description</th>
+                        <th >Type</th>
+                        <th >Created_at</th>
+                        <th >Updated_at</th>
+                    </tr>
+                </thead>
+
+                <tbody class="dashboardinput" id="tablebody">
+                    <!-- to input the task(javascript) -->
+                </tbody>
+            </table>
+        </form>
+        <br>
+        <!-- for the edit/add task -->
+            <div id="overlay" style="display: none;">
+                <div class="task_form" id="taskForm">
+                    <!-- heading for the add task form -->
+                    <div class="top">
+                        <label for="" class="add">Add Task</label>
+                        <span class="close" id="closeBtn">
+                            <button class="cancel">
+                                <section class="x_btn" id="">x</section>
+                            </button>
+                        </span>
+                    </div>
+                    <!-- parent body for the add task form -->
+                    <div id="inner">
+                        <!-- child body for add task form -->
+                        <form action="" id="addForm">
+                            <!-- for the taskname and filepath with respective inputs -->
+                            <div class="innertask">
+                                <div class="div1">
+                                    <label for="" class="taskname">Task_name</label><br>
+                                    <input type="text" class="text">
+                                </div>
+                                <div class="div2">
+                                    <label for="" class="filepath">File_path</label><br>
+                                    <input type="text" class="text">
+                                </div>
+                            </div>
+                            <div class="enabled">
+                                <div class="div3">
+                                    <label for="" class="isenabled">Is_enabled</label><br>
+                                    <input type="text" class="text">
+                                </div>
+                                <div class="div4">
+                                    <label for="" class="interval">Interval</label><br>
+                                    <input type="text" class="text">
+                                </div>
+                            </div>
+                            <div class="describe">
+                                <label for="" class="description">Description</label><br>
+                                <input type="text" class="text1">
+                            </div>
+                        </form>
+                        <button type="submit" id="addtaskBtn">Add Task</button>
+                </div>
+            </div>
+            <button type="menu" id="actionBtn">Action </button>
+         </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="dashboard.js" type="text/javascript"></script>
+</html>

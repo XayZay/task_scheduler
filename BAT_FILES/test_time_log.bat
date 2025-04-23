@@ -1,2 +1,2 @@
 @echo off
-echo Task run at %time% on %date% >> C:\Users\%USERNAME%\Desktop\bat_logs\time_log.txt
+echo Task run at %time% on %date% >> C:\Users\User\Desktop\WORK\Projects\time_log.txt

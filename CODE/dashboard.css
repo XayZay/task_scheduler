@@ -20,6 +20,16 @@ body{
     background-color: #FFFFFF;
     display: flex;
 }
+th{
+    font-size: 12px;
+    color: #121212;
+    border: #FFFFFF;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0px;
+
+}
 .heading{
     width: 189px;
     height: 30px;
@@ -63,6 +73,7 @@ body{
     border: 1px #F4F4F2;
     background-color: #FFFFFF;
     border-radius: 15px;
+
 }
 .head{
     width: 1392px;
@@ -73,6 +84,7 @@ body{
     /* justify-content: flex-start; */
     align-items: center;
     display: flex;
+    border-top-left-radius: 15px ;
 }
 .label{
     width: 478px;

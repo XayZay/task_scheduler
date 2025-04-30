@@ -1,14 +1,17 @@
 $(document).ready(function(){
+    let editingTaskId = null;
     // for the add button and addtaskform
     $("#addtask").click(function(){
+         editingTaskId = null;
          $("#overlay").fadeIn();
         });
-
-    $("#addtaskBtn , #closeBtn").click( function(){
+     
+    $("#addtaskBtn , #closeBtn, #edittaskBtn").click( function(){
         $("#overlay").fadeOut();
     });
     
-    // fetchTasks();
+    // setInterval(fetchTasks, 10000); 
+
 
     // function fetchTasks() {
     //     $.ajax({
@@ -35,7 +38,18 @@ $(document).ready(function(){
     //                         <td>${task.type || ''}</td>
     //                         <td>${task.created_at}</td>
     //                         <td>${task.updated_at}</td>
+                                
+                                //     <td id="td">
+                                //     <button id="active">
+                                //         <p id="word"> Action </p> 
+                                //                 <select  id="custom-select"> 
+                                //                     <option selected></option>
+                                //                     <option value="1">Edit Task</option>
+                                //                     <option value="2">Delete Task</option>
+                                //                 </select>
+                                //     </button>
 
+                                // </td>
     //                     </tr>
     //                     );
     //                 });
@@ -61,18 +75,60 @@ $(document).ready(function(){
     //         method: 'POST',
     //         data:{
     //             action: 'login',
-
+                //    id: editingTaskId
     //         },
     //         datatype:'',
     //         sucesss:  function(){
-    //             alert('Task Added!');
+    //             alert(editingTaskId ? 'Task Updated!' : 'Task Added!');
     //             $("#overlay").fadeOut();
     //             fetchTasks();
     //             $("#addForm")[0].reset();
+                    // editingTaskId = null;
     //         },
     //         error:function(xhr){
     //             alert("Failed to add task:" +xhr.responseText);
     //         }
     //     }); 
-    // });   
+    // });  
+//     $('#tablebody').on('click', '#active', function(){
+//         const row =  $(this).closest('tr');
+//         const selectedAction = row.find('#custom-select').val();
+//         const id = row.data('id');
+
+//         if (!selectedAction) {
+//             alert("Please select an action.");
+//             return;
+//         }
+//         if (selectedAction === "edit"){
+//                 $('.taskname').val(row.find('td:eq(1)').text());
+//                 $('.filepath').val(row.find('td:eq(2)').text());
+//                 $('.isenabled').val(row.find('td:eq(5)').text());
+//                 $('.interval').val(row.find('td:eq(6)').text());
+//                 $('.description').val(row.find('td:eq(8)').text());
+
+//                 editingTaskId = id;
+//                 $("#overlay").fadeIn();
+
+//         }else if(selectedAction === "delete"){                  
+//             if (confirm("Are you sure you want to delete this task?")){
+//                  $.ajax({
+//                         url:'',
+//                         method: 'POST',
+//                         data:{
+//                             id
+//                         },
+//                         sucesss:  function(){
+//                             alert('Task Deleted!')
+//                             $("#overlay").fadeOut();
+//                             fetchTasks();
+//                             $("#addForm")[0].reset();
+//                         },
+//                         error:function(xhr){
+//                             alert("Failed to delete task:" +xhr.responseText);
+//                          }
+//                     });
+//                 }
+//             }
+//     }); 
+
 });

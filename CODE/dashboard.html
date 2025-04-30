@@ -45,6 +45,17 @@
 
                 <tbody class="dashboardinput" id="tablebody">
                     <!-- to input the task(javascript) -->
+                     <td id="td">
+                        <div id="active">
+                            <p id="word"> Action </p> 
+                                    <select  id="custom-select"> 
+                                        <option selected></option>
+                                        <option value="1" id="edittask">Edit Task</option>
+                                        <option value="2">Delete Task</option>
+                                    </select>
+                                </div>
+
+                     </td>
                 </tbody>
             </table>
         </form>
@@ -92,6 +103,7 @@
                             </div>
                         </form>
                         <button type="submit" id="addtaskBtn">Add Task</button>
+                        <!-- <button type="submit" id="edittaskBtn">update Task</button> -->
                 </div>
             </div>
             <button type="menu" id="actionBtn">Action </button>

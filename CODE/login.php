@@ -2,8 +2,8 @@
 session_start();
 require "db_connect.php";
 
-$username = $_POST['username'];
-$password = $_POST['password'];
+$username = $_POST['username'] ?? '';
+$password = $_POST['password'] ?? '';
 
 $stmt = $conn->prepare("SELECT user_id, username FROM login_id WHERE username = ? AND password = ?");
 $stmt->bind_param("ss", $username, $password);

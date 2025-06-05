@@ -12,7 +12,8 @@ body{
 
 }
 .container{
-    width: 100%;
+    min-width: max-content;
+    width: auto;
     height: 68px;
     border-bottom: 1px #F4F4F2;
     justify-content: space-between;
@@ -39,16 +40,328 @@ th{
     letter-spacing: 0px;
     color: #4D4845;
 }
+/* for the account part */
 .account{
     width: 216px;
     height: 36px;
     gap: 8px;
+    display: flex;
 }
-.image{
+/* .account:hover{
+    cursor: pointer;
+} */
+ .user-dropdown{
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+ }
+.user-btn{
+    background: none;
+    font-family: 'Geist';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 8px;
+    transition: background 0.2s;
+}
+.userdrop{
+   font-size: 14px;
+    margin-left: 6px;
+    display: flex;
+}
+.dropdown-arrow { font-size: 12px; }
+.dropdown-menu{
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    border: 1px solid #e7e7e4;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+    z-index: 1000;
+}
+.dropdown-item {
+    padding: 12px 16px;
+    cursor: pointer;
+    font-family: 'Geist';
+    background: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+    border: none;
+}
+.dropdown-item1 {
+    padding: 12px 16px;
+    cursor: pointer;
+    font-family: 'Geist';
+    background: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+    border: none;
+}
+.dropdown-item:hover {
+    background: #f6f6f4;
+    color: #007AFF;
+}
+.dropdown-item1:hover {
+    background: #f6f6f4;
+    color: #007AFF;
+}
+#logoutBtn {
+    color: #d32f2f;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 15px;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+#logoutBtn:hover {
+    background: #ffeaea;
+    color: #b71c1c;
+}
+.user-btn:hover {
+    background: #f0f0f0;
+}
+
+/* for the modal */
+.modal{
+    position: fixed;
+    width: 500px;
+    height: auto;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    padding: 16px;
+    pointer-events: visible;
+    z-index: 3000;
+}
+.modalcon{
+    position: fixed;
+    width: 400px;
+    height: auto;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    padding: 16px;
+    pointer-events: visible;
+    z-index: 3000;}
+#overlay11{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(30, 31, 36, 0.4);
+    display: flex;            /* centers modal inside */
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+/* .modal-con {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    align-items: flex-start;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 0;
+    pointer-events: auto;
+} */
+
+.modal-header {
+    width: 450px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+    /* border: 1px solid #E7E7E4; */
+}
+.modal-body {
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+.input-group{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+#checkbox{
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    border: 1px solid #D9D9D9;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+.span1{
+    margin-top: 80px;
+}
+.input-group-password {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.input-group-password input[type="password"] {
+    flex: 1;
+    padding-right: 38px; /* space for the icon */
+    height: 44px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #D9D9D9;
+    background: #FAFAFA;
+}
+
+.toggle-password {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 14px;
+    cursor: pointer;
+    height: 100%;
+    color: #222;
+    font-size: 18px;
+    user-select: none;
+}        
+
+.p1{
+    font-size: 14px;
+    color: #4D4845;
+    font-weight: 500;
+    line-height: 20px;
+    margin-top: 6px;
+}   
+.p4{
+    font-size: 14px;
+    color: #4D4845;
+    font-weight: 500;
+    line-height: 20px;
+    margin-top: 7px;
+}
+.p5{
+    font-size: 12px;
+    color: #4D4845;
+    font-weight: 500;
+    line-height: 20px;
+    margin-top: -10px;
+}
+.checkbox-label{
+    font-size: 14px;
+    color: #4D4845;
+    font-weight: 500;
+    line-height: 20px;
+    margin-top: 7px;
+}
+.close-modal {
+    position: absolute;
+    top: 12px; right: 16px;
+    font-size: 22px;
+    cursor: pointer;
+}
+#newUsername, #oldPassword,#newPassword,#confirmPassword{
+    width: 100%;
+    height: 40px;
+    padding: 0 14px;
+    margin-top: 10px;
+    border: 1px solid #D9D9D9;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: 'Geist', sans-serif;
+    color: #333;
+    background: #FAFAFA;
+    transition: border 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+#newUsername:focus, #newPassword:focus, #oldPassword:focus {
+    border-color: #007AFF;
+    box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.2);
+}
+#changeUsernameBtn1,#changePasswordBtn1{
+    width: 100%;
+    height: 40px;
+    background: #007AFF;
+    padding: 5px 10px;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 12px;
+    font-family: 'Geist', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,122,255,0.04);
+}
+#confirmDeleteAccount1{
+    width: 40%;
+    height: 40px;
+    background: #007AFF;
+    padding: 5px 10px;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 12px;
+    font-family: 'Geist', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(255,59,48,0.04);
+}
+#cancelDelete{
+    width: 40%;
+    height: 40px;
+    background: #e7e4e4;
+    padding: 5px 10px;
+    color: #4D4845;
+    border: none;
+    border-radius: 20px;
+    font-size: 12px;
+    font-family: 'Geist', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+#changeUsernameBtn1:hover,#changePasswordBtn1:hover,#confirmDeleteAccount1:hover{
+    background: #005BB5;
+    box-shadow: 0 2px 8px rgba(0,122,255,0.1);
+}
+#cancelDelete:hover{
+    background: #d9d9d9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+/* .image{
     width: 32px;
     height: 32px;
-}
-.img1{
+} */
+/* .img1{
     width: 22px; 
     height: 22px; 
     border-radius: 50%;
@@ -59,25 +372,28 @@ th{
     box-sizing: border-box; 
     background-color: #007AFF;
     /* font-size: 16px;  */
-}
+/* } */ 
 .section{
     width: 100%;
-    height: 1232px;
+    height: 100%;
     top: 68px;
     padding: 32px 24px 0px 24px ;
     gap: 8px;
 }
+.dashboard-scroll {
+    width: 100vw;
+}
 .dashboard{
-    width: 100%;
-    height: 1200px;
+    min-width: max-content;
+    width: auto;
+    height: 100%;
     border: 1px #F4F4F2;
     background-color: #FFFFFF;
     border-radius: 15px;
-
 }
 .head{
-    width: 1392px;
-    height: 76px;
+    width: 100%;
+    /* height: 76px; */
     justify-content: space-between;
     padding: 16px;
     background-color: #FFFFFF;
@@ -85,6 +401,7 @@ th{
     align-items: center;
     display: flex;
     border-top-left-radius: 15px ;
+    border-top-right-radius: 15px ;
 }
 .label{
     width: 478px;
@@ -96,18 +413,133 @@ th{
     line-height: 24px;
 }
 table{
-    width: 100%;
+    min-width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
+}
+
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    .heading, .label, .add, th, td {
+        font-size: 14px;
+    }
+    th, td {
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid #eee;
+    }
+    #addtask, #addtaskBtn {
+        width: 90px;
+        font-size: 10px;
+    }
+}
+@media (max-width: 600px) {
+    #taskForm{
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+    #inner{
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+
+    #addForm{
+        width: 100%;
+        padding-top: 10px;
+        gap: 1rem;
+    }
+    .innertask,.enabled{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .div1,.div2,.div3,.div4{
+        width: 100%;
+        display: flex;
+    }
+    .describe{
+        width: 100%;
+    }
+    .taskname,
+    .filepath,
+    .isenabled,
+    .interval,
+    .description
+     {
+        width: 100%;
+    }
+    #addtaskBtn, .cancel{
+        width: 100%;
+        height: 44px;
+        margin-top: 10px;
+    }
+    .add{
+        font-size: 18px;
+        padding-left: 10px;
+    }
+    .top{
+        padding: 10px;
+    }
+    .x_btn{
+        width: 20px;
+        height: 20px;
+    }
+    #closeBtn{
+        height: 24px;
+        width: 24px;
+    }
 }
 th{
     text-align: left;
-    padding: 12px 16px;
+    padding: 8px 10px;
     background-color: #F6F6F4;
     font-weight: 600;
     border-bottom: 1px solid #F4F4F2;
+    border: 0.4px solid #ccc;
+    white-space: nowrap;      /* Prevents text from wrapping to a new line */
+    overflow: hidden;         /* Hides overflow text */
+    text-overflow: ellipsis; 
+    max-width: 400px;
+   
+}
+td{
+    border: 0.4px solid #ccc;
+    padding: 8px 10px; 
+    text-align: left;
+    vertical-align: middle;
+    white-space: nowrap;      
+    overflow: hidden;         
+    text-overflow: ellipsis;  
+    max-width: 400px;
+}
+th:nth-child(3),
+td:nth-child(3) {
+    max-width: 220px;         /* Adjust as needed */
+    min-width: 120px;
+    width: 220px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+}
+td:nth-child(3):hover {
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: block;
+    white-space: nowrap;
+    text-overflow: unset;
+    background-color: #f0f0f0;
+    z-index: 2;
+    position: relative;
+    max-width: 220px; /* Optional: increase if you want a wider scroll area */
+    cursor: ew-resize; 
 }
 #addtask{
-    background-color: #007AFF;
+    /* background-color: #007AFF;
     border-radius: 10px;
     width: 112px;
     outline: none;
@@ -118,9 +550,20 @@ th{
     padding-bottom: 12px;
     padding-left: 16px;
     gap: 8px;
-    margin-right: -20px;
-    color: #FFFFFF;
+    margin-right: -20px;   */
     
+    float: right;
+    background-color: #007AFF;
+    width: 100px;
+    height: 44px;
+    padding-top: 12px;
+    padding-right: 16px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    gap: 8px;   
+    border-radius: 12px;
+    border: #FFFFFF;
+    margin-right: -6px; 
 }
 #addtask:hover{
     color: #407dbf;
@@ -184,12 +627,12 @@ th{
 }
 .x_btn{
     width: 20px;
-    width: 20px;
+    height: 20px;
     border-radius: 50%;
-    border: 2px solid #1E1F24; 
+    /* border: 2px solid #1E1F24;  */
     text-align: center; 
     outline: none; 
-    padding: 0; 
+    padding: 5px; 
     box-sizing: border-box; 
 }
 #inner{
@@ -273,10 +716,11 @@ th{
 }
 .cancel{
     outline: none;
-    border: #F6F6F4;
+    
+    
 }
 .cancel:hover{
-    color: #F6F6F4;
+    color: #65605C;
 }
 input{
     outline: none;
@@ -300,3 +744,86 @@ input:focus{
 #addtaskBtn:hover{
     background-color: #407dbf;
 }
+#tablebody{
+    width: 100%;
+    /* height: 30px; */
+    /* overflow-y: auto; */
+    padding: 0px 24px 0px 24px;
+    gap: 8px;
+    background-color: #FFFFFF;
+    color: #535353;
+    font-size: 14px;
+    font-weight: 500;
+    
+
+}
+/* .task-action{
+    width: 80px;
+    height: 30px;
+    font-family: 'Geist';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0px;9
+    border-radius: 5px;
+    background-color: #F6F6F4;
+    cursor: pointer;
+    border: 1px solid #E7E7E4;
+    padding-right: 5px;
+    outline: none;
+}
+.task-action option{
+    background-color: #FFFFFF;
+    font-size: 16px;
+    height: 36px;
+    padding: 10px;
+} */
+.action-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.action-btn {
+  width: 85px;
+  height: 30px;
+  padding: 6px 12px;
+  background: #F6F6F4;
+  border: 1px solid #e7e7e4;
+  font-family: 'Geist';
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.action-menu {
+  display: none;
+  position: absolute;
+  background: #fff;
+  min-width: 140px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 9999;
+  border-radius: 5px;
+  overflow: visible;
+}
+
+.action-dropdown.open .action-menu {
+  display: block;
+}
+
+.action-item {
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.action-item.edit { color: #928F8B; }
+.action-item.delete { color: #d32f2f; }
+
+.action-item:hover {
+  background: #f0f0f0;
+}
+ 

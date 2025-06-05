@@ -51,18 +51,22 @@ def get_next_run(task):
 def run_task(task):
     file_path = task["file_path"]
     if not os.path.exists(file_path):
-        return f"File not found: {file_path}"
+        print(f"[ERROR] File not found: {file_path}")
+        return "Failed"
     
     try:
         result = subprocess.run(file_path, capture_output=True, text=True, shell=True,check=True,timeout=30)
-        return result.stdout + result.stderr
+        return "Success"
     except subprocess.TimeoutExpired:
-        output = "Error: Task timed out."
+        print(f"[ERROR] Process timed out")
+        return "Failed"
     except subprocess.CalledProcessError as e:
-        output = f"Error: {e}"
+        print(f"Error: {e}")
+        return "Failed"
     except Exception as e:
-        output = f"Unexpected error: {str(e)}"
-
+        print(f"Unexpected error: {str(e)}")
+        return "Failed"
+        
 def main():
     print("Task_Scheduler started")
     while True:

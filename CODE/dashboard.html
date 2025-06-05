@@ -10,92 +10,191 @@
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <label for="" class="heading"><p>Bat Files Dashboard</p></label>
-        <div class="account">
-            <div class="image">
-                <input type="image" class="img1" src="" alt="">
+    <div class="dashboard-scroll">
+        <div class="container">
+            <label for="" class="heading"><p>Bat Files Dashboard</p></label>
+            <div class="account">
+                <div class="user-dropdown">
+                    <button class="user-btn" id="userBtn">
+                        <span class="user-icon">👤</span>
+                        <span class="user-name" id="user11"></span>
+                        <span class="userdrop" id="user-drop">▼</span>
+                    </button>
+                    <div class="dropdown-menu" id="userDropdown" style="display:none;">
+                        <button class="dropdown-item" id="changeUsernameBtn">Change Username</button>
+                        <button class="dropdown-item" id="changePasswordBtn">Change Password</button>
+                        <button class="dropdown-item" id="deleteAccountBtn">Delete Account</button>
+                        <button class="dropdown-item1" id="logoutBtn">🚪Log Out</button>
+                    </div>
+                </div>    
             </div>
         </div>
-    </div>
 
-    <div class="section">
-        <form action="" class="dashboard" id="main">
-            <div class="head">
-                <label for="" class="label"><p>File Table</p></label>
-                <button type="button" id="addtask">Add Task +</button>
-            </div>    
-            <table>
-                <thead>
-                    <tr>
-                        <th>id</th>
-                        <th >task_name</th>
-                        <th >file_path</th>
-                        <th >last_run</th>
-                        <th >last_output</th>
-                        <th >is_enabled</th>
-                        <th >interval_Minutes</th>
-                        <th >next_run</th>
-                        <th >description</th>
-                        <th >type</th>
-                        <th >created_at</th>
-                        <th >updated_at</th>
-                    </tr>
-                </thead>
 
-                <tbody class="dashboardinput" id="tablebody">
-                    <!-- to input the task(javascript) -->
-                </tbody>
-            </table>
-        </form>
-        <br>
-        <!-- for the edit/add task -->
-            <div id="overlay" style="display: none;">
-                <div class="task_form" id="taskForm">
-                    <!-- heading for the add task form -->
-                    <div class="top">
-                        <label for="" class="add">Add Task</label>
-                        <span class="close" id="closeBtn">
-                            <button class="cancel">
-                                <section class="x_btn" id="">x</section>
-                            </button>
-                        </span>
+        <div class="section">
+            <form action="" class="dashboard" id="main">
+                <div class="head">
+                    <label for="" class="label"><p>File Table</p></label>
+                    <button type="button" id="addtask">Add Task +</button>
+                </div>    
+                <table>
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>task_name</th>
+                            <th>file_path</th>
+                            <th>last_run</th>
+                            <th>last_output</th>
+                            <th>is_enabled</th>
+                            <th>interval_Minute</th>
+                            <th>next_run</th>
+                            <th>description</th>
+                            <th>type</th>
+                            <th>created_at</th>
+                            <th>updated_at</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="dashboardinput" id="tablebody">
+                        <!-- to input the task(javascript) -->
+                    </tbody>
+                </table>
+            </form>
+            <br>
+            <!-- for the edit/add task -->
+                <div id="overlay" style="display: none;">
+                    <div class="task_form" id="taskForm">
+                        <!-- heading for the add task form -->
+                        <div class="top">
+                            <label for="" class="add" id="form-heading">Add Task</label>
+                            <span class="close" id="closeBtn">
+                                <button class="cancel">
+                                    <span class="x_btn">x</span>
+                                </button>
+                            </span>
+                        </div>
+                        <!-- parent body for the add task form -->
+                        <div id="inner">
+                            <!-- child body for add task form -->
+                            <form action="" id="addForm">
+                                <!-- for the taskname and filepath with respective inputs -->
+                                <div class="innertask">
+                                    <div class="div1">
+                                        <label for="">Task_name</label><br>
+                                        <input type="text" class="taskname text">
+                                    </div>
+                                    <div class="div2">
+                                        <label for="">File_path</label><br>
+                                        <input type="text" class="filepath text">
+                                    </div>
+                                </div>
+                                
+                                <div class="enabled">
+                                    <div class="div3">
+                                        <label for="">Is_enabled</label><br>
+                                        <select class="isenabled text">
+                                            <option value="1">✅</option>
+                                            <option value="0">❌</option>
+                                        </select>
+                                    </div>
+                                    <div class="div4">
+                                        <label for="">Interval_minutes</label><br>
+                                        <input type="text" class="interval text">
+                                    </div>
+                                </div>
+                                
+                                <div class="describe">
+                                    <label for="">Description</label><br>
+                                    <input type="text" class="description text1">
+                                </div>       
+                                
+                                <button type="submit" id="addtaskBtn">Add Task</button>
+                            </form>
+                            <!-- <button type="submit" id="addtaskBtn">Add Task</button> -->
                     </div>
-                    <!-- parent body for the add task form -->
-                    <div id="inner">
-                        <!-- child body for add task form -->
-                        <form action="" id="addForm">
-                            <!-- for the taskname and filepath with respective inputs -->
-                            <div class="innertask">
-                                <div class="div1">
-                                    <label for="" class="taskname">Task_name</label><br>
-                                    <input type="text" class="text">
-                                </div>
-                                <div class="div2">
-                                    <label for="" class="filepath">File_path</label><br>
-                                    <input type="text" class="text">
-                                </div>
-                            </div>
-                            <div class="enabled">
-                                <div class="div3">
-                                    <label for="" class="isenabled">Is_enabled</label><br>
-                                    <input type="text" class="text">
-                                </div>
-                                <div class="div4">
-                                    <label for="" class="interval">Interval</label><br>
-                                    <input type="text" class="text">
-                                </div>
-                            </div>
-                            <div class="describe">
-                                <label for="" class="description">Description</label><br>
-                                <input type="text" class="text1">
-                            </div>
-                        </form>
-                        <button type="submit" id="addtaskBtn">Add Task</button>
+                </div>
+            
+            </div>
+        </div>
+        <div id="notification" style="display:none;position:fixed;top:20px;right:20px;padding:12px 20px;background:#333;color:#fff;border-radius:5px;z-index:9999;"></div>
+    </div>
+    <div class="overlay1" id="overlay11" style="display:none;">
+        <!-- change username -->
+        <div id="changeUsernameModal" class="modal" style="display:none;">
+            <div class="modal-con">
+                <div class="modal-header">
+                    <span class="span1">Change Username</span>
+                    <span class="close-modal" id="closeUsernameModal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <p class="p1">Enter your new username below:</p>
+
+                    <div class="input-group">
+                        <input type="text" name="" id="newUsername">
+                    </div>
+                    <p class="p4"><b>Note:</b> Changing the username affects the login of the users. After updating the username, inform the user directly to prevent creation of a new account with former username.</p>
+                    <button id="changeUsernameBtn1">Change Username</button>
                 </div>
             </div>
-            <button type="menu" id="actionBtn">Action </button>
-         </div>
+        </div>
+        <!-- change password -->
+        <div id="changePasswordModal" class="modal" style="display:none;">
+            <div class="modal-con">
+                <div class="modal-header">
+                    <span class="span1">Change Password</span>
+                    <span class="close-modal" id="closePasswordModal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <p class="p1">Your pasword must be at least 6 characters and should include a combination of numbers and letters</p>
+                    <div class="input-group-password">
+                        <input type="password" id="oldPassword" placeholder="Enter old password">
+                        <span class="toggle-password" toggle="#oldPassword" style="position:absolute; right:14px; top:50%; transform:translateY(-50%); cursor:pointer; font-size:18px;"></span>
+                    </div>
+                    
+                    <div class="input-group-password">
+                          <input type="password" id="newPassword" placeholder="Enter new password">
+                          <span class="toggle-password" toggle="#newPassword" style="position:absolute; right:14px; top:50%; transform:translateY(-50%); cursor:pointer; font-size:18px;"></span>
+                    </div>
+                    <div class="input-group-password">
+                        <input type="password" id="confirmPassword" placeholder="Confirm new password">
+                        <span class="toggle-password" toggle="#confirmPassword" style="position:absolute; right:14px; top:50%; transform:translateY(-50%); cursor:pointer; font-size:18px;"></span>
+                    </div>
+                    <button id="changePasswordBtn1">Change Password</button>
+                </div>
+            </div>
+        </div>
+        <!-- delete account -->
+        <div id="deleteAccountModal" class="modalcon" style="display:none;">
+            <div class="modal-con">
+                <div class="modal-header">
+                    <span class="span1">Delete Account</span>
+                    <span class="close-modal" id="closeDeleteModal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <p class="p5">Are you sure you want to delete this account?</p>
+                    <p class="p5">This action cannot be undone.</p>
+                    <div class="input-group-checkbox">
+                        <input type="checkbox" name="" id="checkbox">
+                        <label for="checkbox" class="checkbox-label">I understand that this action cannot be undone.</label>
+                    </div>
+                    <div class="input-group" style="flex-direction: row; gap: 12px;">
+                        <button id="confirmDeleteAccount1">Yes, Delete</button>
+                        <button id="cancelDelete">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+    <!-- <div class="footer">
+        <p>Made with ❤️ by <a href=" profile.html" target="_blank">Siddharth</a></p>
+        <p>© 2023 Bat Files Dashboard</p>
+    </div> -->
+    <div id="deleteConfirmPopup" style="display:none; position:absolute; z-index:4000; background:#fff; border:1px solid #ccc; border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,0.12); padding:20px; min-width:220px;">
+        <div style="margin-bottom:12px;">Are you sure you want to delete this task?</div>
+        <button id="confirmDeleteYes" style="background:#d32f2f;color:#fff;padding:6px 16px;border:none;border-radius:4px;margin-right:8px;">Yes</button>
+        <button id="confirmDeleteNo" style="background:#eee;color:#222;padding:6px 16px;border:none;border-radius:4px;">No</button>
     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
